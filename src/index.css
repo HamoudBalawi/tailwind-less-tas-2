@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button {
+  @apply px-4 py-3 text-xs font-semibold rounded;
+}
+
+.button-one {
+  @apply bg-gray-900 text-gray-200;
+}
+.button-one:hover {
+  @apply bg-gray-800;
+}
+
+.button-two {
+  @apply mx-4 bg-gray-300 text-gray-900;
+}
+.button-two:hover {
+  @apply bg-gray-400;
+}
+
+.mobile-menu-button {
+  @apply block text-gray-800;
+}
+.mobile-menu-button:hover {
+  @apply text-gray-700;
+}
+.mobile-menu-button:focus {
+  @apply text-gray-700 outline-none;
+}
+
+.hero {
+  @apply flex bg-white;
+  height: 550px;
+}
+
+.hero-image {
+  @apply h-full object-cover;
+  background-image: url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
+}
+
+.hero-image-wrapper {
+  @apply hidden;
+  clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0 100%);
+}
+.hero-text-wrapper {
+  @apply flex items-center text-center px-8;
+}
+
+@screen md {
+  .hero-text-wrapper {
+    @apply px-12;
+  }
+}
+
+@screen lg {
+  .hero {
+    height: 700px;
+  }
+  .hero-image-wrapper {
+    @apply block w-1/2;
+  }
+  .hero-text-wrapper {
+    @apply text-left w-1/2;
+  }
+}
